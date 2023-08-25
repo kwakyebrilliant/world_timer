@@ -11,7 +11,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Text('home'),
+      body: SafeArea(child: Text('home')),
     );
   }
 }
