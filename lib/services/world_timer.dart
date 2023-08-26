@@ -1,11 +1,13 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class WoldTimer {
+class WorldTimer {
   late String location; //location name for UI
   late String time; //the time in that location
   late String flag; //url to asset flag icon
   late String url; //location url
+
+  WorldTimer({required this.location, required this.flag, required this.url});
 
   void getTime() async {
     //make a request
