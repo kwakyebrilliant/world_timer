@@ -8,31 +8,27 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  int counter = 0;
+  void getData() {
+    //simulate a network request for a usename
+    Future.delayed(const Duration(seconds: 3), () {
+      print('teleku');
+    });
+  }
 
   @override
   void initState() {
     super.initState();
-    print('initState function ran');
+    getData();
   }
 
   @override
   Widget build(BuildContext context) {
-    print('build function ran');
     return Scaffold(
       backgroundColor: Colors.green[200],
       appBar: AppBar(
         backgroundColor: Colors.green[500],
         title: const Text('Choose your location'),
         centerTitle: true,
-      ),
-      body: ElevatedButton(
-        onPressed: () {
-          setState(() {
-            counter += 1;
-          });
-        },
-        child: Text('counter is $counter'),
       ),
     );
   }
