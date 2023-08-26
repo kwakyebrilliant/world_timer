@@ -24,6 +24,8 @@ class _LoadingState extends State<Loading> {
     //print(utc_offset);
 
     //create datetime object
+    DateTime now = DateTime.parse(datetime);
+    print(now);
   }
 
   @override
