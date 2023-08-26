@@ -10,18 +10,18 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  void getData() async {
+  void getTime() async {
+    //make a request
     final response = await http
-        .get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
+        .get(Uri.parse('http://worldtimeapi.org/api/timezone/Europe/London'));
     Map data = jsonDecode(response.body);
     print(data);
-    print(data['title']);
   }
 
   @override
   void initState() {
     super.initState();
-    getData();
+    getTime();
   }
 
   @override
