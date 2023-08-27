@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:world_timer/services/world_timer.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -29,10 +30,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all(50.0),
-        child: Text('loading'),
-      ),
+      body: Center(),
     );
   }
 }
