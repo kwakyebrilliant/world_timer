@@ -13,6 +13,7 @@ class _LoadingState extends State<Loading> {
     WorldTimer instance = WorldTimer(
         location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
     await instance.getTime();
+    Navigator.pushReplacementNamed(context, '/home');
   }
 
   @override
