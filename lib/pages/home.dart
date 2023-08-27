@@ -34,6 +34,14 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.green[500]),
                 ),
               ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: <Widget>[
+                  Text(data['location']),
+                ],
+              ),
             ],
           ),
         ),
