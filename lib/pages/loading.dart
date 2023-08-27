@@ -9,8 +9,6 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  String time = 'loading';
-
   void setupWorldTimer() async {
     WorldTimer instance = WorldTimer(
         location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
@@ -25,10 +23,10 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(50.0),
-        child: Text(time),
+        padding: EdgeInsets.all(50.0),
+        child: Text('loading'),
       ),
     );
   }
