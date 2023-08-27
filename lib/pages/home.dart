@@ -39,7 +39,13 @@ class _HomeState extends State<Home> {
               ),
               Row(
                 children: <Widget>[
-                  Text(data['location']),
+                  Text(
+                    data['location'],
+                    style: const TextStyle(
+                      fontSize: 28.0,
+                      letterSpacing: 2.0,
+                    ),
+                  ),
                 ],
               ),
             ],
