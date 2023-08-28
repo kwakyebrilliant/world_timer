@@ -16,6 +16,9 @@ class _HomeState extends State<Home> {
         (ModalRoute.of(context)?.settings.arguments as Map<dynamic, dynamic>?)!;
     print(data);
 
+    //set background
+    late String bgImg = data['isDayTime'] ? 'day.jpg' : 'night.jpeg';
+
     return Scaffold(
       body: SafeArea(
         child: Center(
