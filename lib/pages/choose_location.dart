@@ -39,7 +39,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
                   const EdgeInsets.symmetric(vertical: 1.0, horizontal: 4.0),
               child: Card(
                 child: ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    print(locations[index].location);
+                  },
                   title: Text(locations[index].location),
                   leading: CircleAvatar(
                     backgroundImage:
