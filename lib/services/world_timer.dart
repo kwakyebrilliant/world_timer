@@ -30,6 +30,7 @@ class WorldTimer {
       now = now.add(Duration(hours: int.parse(utc_offset)));
 
       //set the time property
+      isDayTime = now.hour > 6 && now.hour < 20 ? true : false;
       time = DateFormat.jm().format(now);
     } catch (e) {
       print('caught error: $e');
