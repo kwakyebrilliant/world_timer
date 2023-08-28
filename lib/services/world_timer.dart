@@ -7,6 +7,7 @@ class WorldTimer {
   late String time; //the time in that location
   late String flag; //url to asset flag icon
   late String url; //location url
+  late bool isDayTime; // true or false iif it is daytime or not
 
   WorldTimer({required this.location, required this.flag, required this.url});
 
