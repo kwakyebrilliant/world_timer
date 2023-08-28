@@ -32,7 +32,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
       body: ListView.builder(
         itemCount: locations.length,
         itemBuilder: (context, index) {
-          return Card();
+          return Card(
+            child: ListTile(
+              onTap: () {},
+              title: Text(locations[index].location),
+            ),
+          );
         },
       ),
     );
