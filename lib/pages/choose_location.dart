@@ -29,6 +29,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
         title: const Text('Choose your location'),
         centerTitle: true,
       ),
+      body: ListView.builder(
+        itemCount: locations.length,
+        itemBuilder: (context, index) {
+          return Card();
+        },
+      ),
     );
   }
 }
