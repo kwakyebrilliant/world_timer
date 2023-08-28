@@ -21,6 +21,11 @@ class _ChooseLocationState extends State<ChooseLocation> {
     WorldTimer(url: 'Asia/Jakarta', location: 'Jakarta', flag: 'indonesia.png'),
   ];
 
+  void updateTime(index) async {
+    WorldTimer instance = locations[index];
+    await instance.getTime();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +46,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
               child: Card(
                 child: ListTile(
                   onTap: () {
-                    print(locations[index].location);
+                    updateTime(index);
                   },
                   title: Text(locations[index].location),
                   leading: CircleAvatar(
