@@ -24,6 +24,13 @@ class _ChooseLocationState extends State<ChooseLocation> {
   void updateTime(index) async {
     WorldTimer instance = locations[index];
     await instance.getTime();
+    // navigate to the home screen
+    Navigator.pop(context, {
+      'location': instance.location,
+      'flag': instance.flag,
+      'time': instance.time,
+      'isDayTime': instance.isDayTime,
+    });
   }
 
   @override
