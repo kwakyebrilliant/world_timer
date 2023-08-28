@@ -38,6 +38,10 @@ class _ChooseLocationState extends State<ChooseLocation> {
               child: ListTile(
                 onTap: () {},
                 title: Text(locations[index].location),
+                leading: CircleAvatar(
+                  backgroundImage:
+                      AssetImage('assets/${locations[index].flag}'),
+                ),
               ),
             );
           },
